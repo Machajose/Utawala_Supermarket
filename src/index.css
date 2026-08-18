@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", serif;
+  --font-body: "Manrope", sans-serif;
+
+  --color-paper: #FBF6EC;
+  --color-ink: #23291F;
+  --color-market-green: #1F4032;
+  --color-market-green-light: #2E5C48;
+  --color-marigold: #E29A2E;
+  --color-clay: #C9603D;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Stripe divider evoking a market-stall awning */
+.awning-stripe {
+  background: repeating-linear-gradient(
+    115deg,
+    var(--color-market-green) 0px,
+    var(--color-market-green) 28px,
+    var(--color-marigold) 28px,
+    var(--color-marigold) 56px
+  );
+}
+
+/* Rotated stamp badge used for offers/tags — the signature element */
+.stamp {
+  transform: rotate(-6deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
