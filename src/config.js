@@ -1,0 +1,1 @@
+export const WHATSAPP_NUMBER = '254 725 806522' // placeholder — swap for real number
