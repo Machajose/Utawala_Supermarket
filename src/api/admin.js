@@ -26,4 +26,4 @@ export default async function handler(req, res) {
   }
 
   return res.status(200).json({ entries: data })
-}
+}console.log('Received key:', key, 'Expected:', process.env.ADMIN_KEY)
