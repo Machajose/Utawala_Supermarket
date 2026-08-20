@@ -1,10 +1,15 @@
 import { StampBadge, SectionEyebrow } from './Shared'
 
+//Relevant images of offers
+import RiceImage from "../assets/rice.jpeg";
+import MaizeFlourImage from "../assets/unga.jpeg";
+
+
 const items = [
   { name: 'Cooking Oil 2L', price: 'KES 450', seed: 'oil' },
-  { name: 'Maize Flour 2kg', price: 'KES 180', seed: 'flour' },
+  { name: 'Maize Flour 2kg', price: 'KES 180', photo: MaizeFlourImage},
   { name: 'Sugar 2kg', price: 'KES 260', seed: 'sugar' },
-  { name: 'Rice 2kg', price: 'KES 320', seed: 'rice' },
+  { name: 'Rice 2kg', price: 'KES 320', photo: RiceImage},
   { name: 'Bread (Large)', price: 'KES 65', seed: 'bread' },
   { name: 'Fresh Tomatoes 1kg', price: 'KES 90', seed: 'tomato' },
 ]
@@ -21,7 +26,7 @@ export default function Offers() {
           {items.map((item) => (
             <div key={item.name} className="bg-card text-ink rounded-2xl overflow-hidden shadow-lg">
               <img
-                src={`https://picsum.photos/seed/${item.seed}/400/260`}
+                src={item.photo}
                 alt={item.name}
                 className="w-full h-40 object-cover"
               />
