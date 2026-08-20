@@ -16,10 +16,9 @@ export default function Hero() {
             <span className="text-clay">no long queue.</span>
           </h1>
           <p className="mt-6 text-lg text-ink/80 max-w-md">
-            Utawala Supermarket — your neighbourhood shop in Kerugoya Town
-            for groceries, household essentials and fresh produce, with
-            delivery and bulk orders sorted over WhatsApp.
-          </p>
+            Utawala Supermarket — your neighbourhood shop in Mukinduri Town
+  for household essentials, dairy products and beverages, with
+  orders and enquiries sorted over WhatsApp.</p>
           <div className="mt-8 flex flex-wrap gap-4">
             
               <a href={`https://wa.me/${WHATSAPP_NUMBER}`}
