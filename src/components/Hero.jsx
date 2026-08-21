@@ -1,5 +1,7 @@
 import { WHATSAPP_NUMBER } from '../config'
 import { StampBadge } from './Shared'
+//Image
+import Utawala from "../assets/utawala.jpeg";
 
 export default function Hero() {
   return (
@@ -36,10 +38,10 @@ export default function Hero() {
         </div>
         <div className="relative">
           <img
-            src="https://picsum.photos/seed/supermarket-shelf/700/560"
-            alt="Supermarket shelves stocked with groceries"
-            className="rounded-3xl w-full object-cover aspect-[5/4] shadow-xl"
-          />
+  src={Utawala}
+  alt="Utawala Supermarket storefront in Mukinduri Town"
+  className="rounded-3xl w-full object-cover aspect-[5/4] shadow-xl"
+/>
           <StampBadge className="absolute -bottom-4 -left-4 bg-market-green text-paper border-paper">
             Est. placeholder
           </StampBadge>

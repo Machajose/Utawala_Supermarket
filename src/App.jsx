@@ -9,6 +9,8 @@ import Loyalty from './components/Loyalty'
 import LocationSection from './components/LocationSection'
 import Footer from './components/Footer'
 
+import FaqWidget from './components/FaqWidget'
+// ...
 export default function App() {
   return (
     <div>
@@ -22,6 +24,7 @@ export default function App() {
       <Loyalty />
       <LocationSection />
       <Footer />
+      <FaqWidget />
     </div>
   )
 }
