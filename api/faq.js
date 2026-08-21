@@ -49,8 +49,10 @@ export default async function handler(req, res) {
     })
 
     if (!response.ok) {
-      throw new Error('Groq request failed')
-    }
+  const errText = await response.text()
+  console.error('Groq error:', response.status, errText)
+  throw new Error('Groq request failed')
+}
 
     const data = await response.json()
     const reply = data.choices?.[0]?.message?.content || "Sorry, I couldn't process that — please try again."
