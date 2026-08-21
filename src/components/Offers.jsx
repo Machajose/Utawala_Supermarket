@@ -42,9 +42,9 @@ export default function Offers() {
           </div>
           <div className="hidden sm:flex gap-2">
             <button onClick={() => scrollByCard(-1)} aria-label="Previous offers"
-              className="w-10 h-10 rounded-full bg-card text-ink flex items-center justify-center hover:bg-marigold transition-colors">‹</button>
+              className="w-10 h-10 rounded-full bg-white text-slate-900 flex items-center justify-center hover:bg-marigold transition-colors">‹</button>
             <button onClick={() => scrollByCard(1)} aria-label="Next offers"
-              className="w-10 h-10 rounded-full bg-card text-ink flex items-center justify-center hover:bg-marigold transition-colors">›</button>
+              className="w-10 h-10 rounded-full bg-white text-slate-900 flex items-center justify-center hover:bg-marigold transition-colors">›</button>
           </div>
         </div>
 
@@ -54,12 +54,14 @@ export default function Offers() {
         {status === 'done' && (
           <div ref={trackRef} className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 -mx-6 px-6 scroll-smooth" style={{ scrollbarWidth: 'none' }}>
             {items.map((item) => (
-              <div key={item.id} className="snap-start shrink-0 w-[240px] bg-card rounded-2xl overflow-hidden shadow-lg">
+              <div key={item.id} className="snap-start shrink-0 w-[240px] rounded-2xl overflow-hidden shadow-lg" style={{ backgroundColor: '#FBFAF6' }}>
                 <div className="bg-white h-40 flex items-center justify-center p-3">
                   <img src={item.image_url} alt={item.name} className="max-h-full max-w-full object-contain" />
                 </div>
-                <div className="bg-card p-5 flex items-center justify-between gap-3">
-                  <span className="font-semibold text-ink text-[15px] leading-snug">{item.name}</span>
+                <div className="p-5 flex items-center justify-between gap-3" style={{ backgroundColor: '#FBFAF6' }}>
+                  <span className="font-bold text-[15px] leading-snug" style={{ color: '#1A1D23' }}>
+                    {item.name}
+                  </span>
                   <StampBadge className="shrink-0">{item.price}</StampBadge>
                 </div>
               </div>
