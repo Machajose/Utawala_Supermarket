@@ -22,16 +22,18 @@ export default function Loyalty() {
       <SectionEyebrow>Stay in the loop</SectionEyebrow>
       <h2 className="font-display font-700 text-4xl mb-4 text-market-green">Join Our Loyalty List</h2>
       <p className="text-ink/70 max-w-md mx-auto mb-8">
-        Get first word on weekly offers and bulk deals, straight to WhatsApp.
+        Get first word on weekly offers and bulk deals, straight to WhatsApp or email.
       </p>
       {status === 'done' ? (
         <p className="text-market-green font-semibold">You're on the list — thank you!</p>
       ) : (
-        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-          <input required className="flex-1 rounded-full border border-ink/15 px-5 py-3" placeholder="Your name"
+        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-2xl mx-auto flex-wrap justify-center">
+          <input required className="flex-1 min-w-[180px] rounded-full border border-ink/15 px-5 py-3" placeholder="Your name"
             onChange={(e) => setValues((v) => ({ ...v, name: e.target.value }))} />
-          <input required className="flex-1 rounded-full border border-ink/15 px-5 py-3" placeholder="Phone number"
+          <input required className="flex-1 min-w-[180px] rounded-full border border-ink/15 px-5 py-3" placeholder="Phone number"
             onChange={(e) => setValues((v) => ({ ...v, phone: e.target.value }))} />
+          <input type="email" className="flex-1 min-w-[180px] rounded-full border border-ink/15 px-5 py-3" placeholder="Email (optional)"
+            onChange={(e) => setValues((v) => ({ ...v, email: e.target.value }))} />
           <button disabled={status === 'sending'} className="bg-market-green text-paper font-semibold px-6 py-3 rounded-full hover:bg-market-green-light transition-colors disabled:opacity-60">
             {status === 'sending' ? 'Joining…' : 'Join'}
           </button>

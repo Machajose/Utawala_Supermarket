@@ -1,12 +1,14 @@
 import { WHATSAPP_NUMBER } from '../config'
+import logo from '../assets/logo-full.svg'
+
 
 export default function Nav() {
   return (
     <header className="sticky top-0 z-40 bg-paper/90 backdrop-blur border-b border-ink/10">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#top" className="font-display font-700 text-xl text-market-green">
-          Utawala Supermarket
-        </a>
+        <a href="#top" className="flex items-center">
+  <img src={logo} alt="Utawala Supermarket" className="h-14" />
+</a>
         <nav className="hidden md:flex gap-8 text-sm font-medium">
           <a href="#offers" className="hover:text-clay transition-colors">Offers</a>
           <a href="#bulk" className="hover:text-clay transition-colors">Bulk Orders</a>
