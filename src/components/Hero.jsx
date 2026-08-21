@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="hero-gradient-bg absolute inset-0 -z-10" />
       <div className="max-w-6xl mx-auto px-6 pt-14 pb-20 grid md:grid-cols-2 gap-10 items-center">
         <div>
-          <StampBadge>Open Daily · 7am – 9pm</StampBadge>
+          <StampBadge>Open Daily · 7am til Late</StampBadge>
           <h1 className="font-display font-700 text-5xl md:text-6xl leading-[1.05] mt-6 text-market-green">
             Fresh stock,
             <br />
@@ -43,7 +43,7 @@ export default function Hero() {
   className="rounded-3xl w-full object-cover aspect-[5/4] shadow-xl"
 />
           <StampBadge className="absolute -bottom-4 -left-4 bg-market-green text-paper border-paper">
-            Est. placeholder
+            Quality You Can Trust
           </StampBadge>
         </div>
       </div>
