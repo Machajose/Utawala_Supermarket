@@ -5,8 +5,8 @@ const MAX_MESSAGES = 8
 export default function FaqWidget() {
   const [open, setOpen] = useState(false)
   const [messages, setMessages] = useState([
-    { role: 'assistant', content: "Hi! I'm here to help with hours, location, offers, and bulk orders. What would you like to know?" },
-  ])
+  { role: 'assistant', content: "Hi! I'm the Utawala Supermarket assistant. I can help with our products, weekly offers, hours, location, bulk orders, and more — what would you like to know?" },
+])
   const [input, setInput] = useState('')
   const [sending, setSending] = useState(false)
   const [limitReached, setLimitReached] = useState(false)
